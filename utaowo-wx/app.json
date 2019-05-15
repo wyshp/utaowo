@@ -1,0 +1,31 @@
+{
+  "pages": [
+    "pages/welcome/welcome",
+    "pages/index/index",
+    "pages/news/news"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#69C3AA",
+    "navigationBarTitleText": "优淘窝",
+    "navigationBarTextStyle": "black"
+  },
+"tabBar": {
+  "position": "top",
+  "backgroundColor": "#69C3AA",
+  "color": "#DCEDC8",
+  "selectedColor": "#DCEDC8",
+  "list": [
+    {
+      "pagePath": "pages/index/index",
+      "text": "首页"
+    },
+    {
+      "pagePath": "pages/news/news",
+      "text": "新闻"
+    }
+  ]
+},
+  "sitemapLocation": "sitemap.json"
+}
