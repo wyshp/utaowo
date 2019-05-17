@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <!-- 控制台日志 -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <Encoding>UTF-8</Encoding>
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS}|%.-1level|%logger{0}:%L|%msg%n
+            </pattern>
+        </layout>
+    </appender>
+
+    <appender name="utaowo" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>${catalina.home:-.}/logs/utaowo.log</File>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS}|%.-1level|%logger{0}:%L|%msg%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${catalina.home}/logs/utaowo.log.%d{yyyy-MM-dd}.gz</fileNamePattern>
+        </rollingPolicy>
+    </appender>
+
+    <logger name="org.apache" level="ERROR"/>
+    <logger name="org.springframework" level="ERROR"/>
+
+    <root level="INFO">
+        <appender-ref ref="utaowo"/>
+    </root>
+
+</configuration>

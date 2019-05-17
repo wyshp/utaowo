@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.utaowo.mapper.AdMapper">
+
+  <!-- 通用查询结果列-->
+  <sql id="Base_Column_List">
+		  id,ad_type,link,img_url,content,status
+	</sql>
+
+  <!-- 查询 -->
+  <select id="getAll" resultType="ad">
+    SELECT
+      <include refid="Base_Column_List" />
+    FROM t_ad
+  </select>
+</mapper>
