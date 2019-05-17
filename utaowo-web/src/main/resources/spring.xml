@@ -40,15 +40,13 @@
         <property name="ignoreResourceNotFound" value="true"/>
         <property name="locations">
             <list>
-                <value>classpath:web-config.properties</value>
+                <value>classpath:META-INF/web-config.properties</value>
             </list>
         </property>
         <property name="fileEncoding" value="UTF-8"/>
     </bean>
 
     <!-- 数据源配置，采用德鲁伊数据源 -->
-
-
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource"
           destroy-method="close">
         <property name="url" value="${druid.url}"/>
@@ -79,7 +77,7 @@
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
         <property name="configLocation" value="classpath:mybatis.xml"/>
-        <property name="mapperLocations" value="classpath*:com/ulewo/mapper/*.xml"></property>
+        <property name="mapperLocations" value="classpath*:com/utaowo/mapper/*.xml"></property>
     </bean>
 
     <bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate" scope="prototype">
@@ -88,7 +86,7 @@
 
     <!-- 注解mapper，扫描mapper下的所有mapper -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.ulewo.mapper"/>
+        <property name="basePackage" value="com.utaowo.mapper"/>
     </bean>
 
     <!-- 配置ibatis的局部事务管理器，使用DataSourceTransactionManager类-->
@@ -100,7 +98,4 @@
 
     <task:annotation-driven/>
 
-    <bean id="ehCacheManager" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
-        <property name="configLocation" value="classpath:ehcache.xml"/>
-    </bean>
 </beans>
