@@ -78,7 +78,14 @@ public class BaseController {
         return toResponsObject(0, msg, "");
     }
 
+    public Map<String, Object> toResponsSuccess(Object data) {
+        Map<String, Object> rp = toResponsObject(0, "执行成功", data);
+        return rp;
+    }
+
     public Map<String, Object> toResponsFail(String msg) {
         return toResponsObject(1, msg, null);
     }
+
+
 }

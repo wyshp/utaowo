@@ -8,9 +8,13 @@
 	</sql>
 
   <!-- 查询 -->
-  <select id="getAll" resultType="ad">
+  <select id="queryList" resultType="ad">
     SELECT
       <include refid="Base_Column_List" />
     FROM t_ad
+    WHERE status = 1
+    <if test="adType != null">
+      and ad_type = #{adType}
+    </if>
   </select>
 </mapper>

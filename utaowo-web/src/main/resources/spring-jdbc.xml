@@ -14,14 +14,14 @@
 		http://www.springframework.org/schema/aop/spring-aop-2.5.xsd">
 
     <tx:annotation-driven/>
-    <context:property-placeholder location="classpath*:dev/web-config.properties"/>
+    <context:property-placeholder location="classpath*:properties/web-config.properties"/>
 
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
-        <property name="url" value="${jdbc.url}"/>
-        <property name="username" value="${jdbc.username}" />
-        <property name="password" value="${jdbc.password}" />
-        <property name="initialSize" value="${jdbc.initialSize}" />
-        <property name="maxActive" value="${jdbc.maxActive}" />
+        <property name="url" value="${druid.url}"/>
+        <property name="username" value="${druid.username}" />
+        <property name="password" value="${druid.password}" />
+        <property name="initialSize" value="${druid.initialSize}" />
+        <property name="maxActive" value="${druid.maxActive}" />
         <property name="proxyFilters">
             <list>
                 <ref bean="stat-filter"/>
