@@ -54,7 +54,13 @@ App({
   },
   
   globalData: {
-    userInfo: null,
+    userInfo: {
+      nickName: 'Hi,游客',
+      userName: '点击去登录',
+      avatarUrl: '/static/images/unlogin.png'
+    },
+    token: '',
+    
     juhetoutiaoBase: "https://v.juhe.cn/toutiao/index",
     juhetoutiaoKey: "a9f703a0200d68926f707f3f13629078"
   }

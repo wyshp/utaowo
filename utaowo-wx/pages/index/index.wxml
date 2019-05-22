@@ -3,9 +3,9 @@
   <!-- 轮播图-->
   <view class="slides">
     <swiper autoplay="true" indicator-dots="true" circular="true">
-      <swiper-item wx:for="{{swiperList}}" wx:key="{{index}}">
+      <swiper-item wx:for="{{bannerList}}" wx:key="{{index}}">
         <navigator>
-          <image mode="widthFix" src="{{item.imgSrc}}"></image>
+          <image mode="widthFix" src="{{item.imgUrl}}"></image>
         </navigator>
       </swiper-item>
     </swiper>

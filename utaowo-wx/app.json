@@ -2,7 +2,7 @@
   "pages": [
     "pages/welcome/welcome",
     "pages/index/index",
-    "pages/news/news"
+    "pages/resource/resource"
     
   ],
   "window": {
@@ -22,8 +22,8 @@
       "text": "首页"
     },
     {
-      "pagePath": "pages/news/news",
-      "text": "新闻"
+      "pagePath": "pages/resource/resource",
+      "text": "资源"
     }
   ]
 },

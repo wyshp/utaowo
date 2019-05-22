@@ -1,0 +1,19 @@
+<view class="video_info" style="text-align: center;">
+  <video src="https://www.bilibili.com/blackboard/player.html?aid=170001&cid=279786&page=1&as_wide=1" controls='true'></video>
+  <!--视频标题-->
+  <view class="video_title">
+      <text>Java编程学习课程01</text>
+      <text class="fa fa-angle-down"></text>
+  </view>
+  <!--视频作者-->
+  <view class="video_detail">
+    <!--作者-->
+    <text class="author">爱笑的代码狗</text>
+    <!--播放量-->
+    <text class="play_count">10</text>
+    <!--评论-->
+    <text class="comment_count">1011弹幕</text>
+    <!--时间-->
+    <text class="date">21:10</text>
+  </view>
+</view>

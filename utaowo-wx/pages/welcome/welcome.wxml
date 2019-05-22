@@ -13,10 +13,11 @@
       </view>
       <view class="bd">
          <image class="smalltitle" src="/static/images/welcome/confirm-word1.png"></image>
-        <view class="confirm-btn" bindtap='goToIndex'>
+        <view class="confirm-btn" bindtap='goToIndex' wx:if="{{userInfo.avatarUrl}}">
           <text >进入小窝</text>
         </view>
-        <text class="copyright">@qindiandadudu 贡献本页代码</text>
+        <button class="confirm-btn"  open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" wx:else>点击授权</button>
+        <text class="copyright">@2019 优淘窝</text>
       </view>
     </view>
   </block>
